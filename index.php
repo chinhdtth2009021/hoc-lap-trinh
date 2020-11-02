@@ -1,1 +1,1 @@
-<?php include_once("hoclamwed.html"); ?>
+<?php include_once("lap2/hoclamwed.html"); ?>
