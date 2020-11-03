@@ -1,10 +1,18 @@
 
-body {
-    display: block;
-    margin: 8px;
-}
+
 body{
-    font-size: 20px;
+    font-size: 25px;
+}
+div {
+    margin: 0 300px;
+    margin-top: 0px;
+    margin-right: 300px;
+    margin-bottom: 0px;
+    margin-left: 300px;
+}
+.indam{
+    color: black;
+    font-weight: bold;
 }
 .chudo{
     color: red;
@@ -14,13 +22,16 @@ body{
     font-style: italic;
     text-decoration-line: underline;
 }
+.innghieng{
+  font-style: italic;
+}
 .chudodam{
     color: #db0000;
     font-weight: bold;
 }
 .nghiendo{
     color: red;
-
+    font-style: italic;
 }
 p2  ul span {
     color: red;
