@@ -1,0 +1,31 @@
+
+body {
+    display: block;
+    margin: 8px;
+}
+body{
+    font-size: 20px;
+}
+.chudo{
+    color: red;
+}
+.chuxanh{
+    color: green;
+    font-style: italic;
+    text-decoration-line: underline;
+}
+.chudodam{
+    color: #db0000;
+    font-weight: bold;
+}
+.nghiendo{
+    color: red;
+
+}
+p2  ul span {
+    color: red;
+}
+body {
+    display: block;
+    margin: 12px;
+}
