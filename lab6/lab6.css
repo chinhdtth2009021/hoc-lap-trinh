@@ -1,0 +1,99 @@
+*{
+    box-sizing: border-box;
+}
+header  {
+    padding: 15px;
+    height: 118px;
+}
+img {
+    margin-top: 12px;
+    margin-left: 100px;
+}
+.name {
+    position: absolute;
+    left: 250px;
+    top: 60px;
+    bottom: 400px;
+    font-family: "Candara Light";
+}
+.chinh{
+    padding: 20px;
+    height: 135px;
+}
+.main {
+    height: 870px;
+    padding-left: 154px;
+    padding-right: 209px;
+    padding-top: 84px;
+}
+.home {
+    position: absolute;
+    right: 333px;
+    top: 55px;
+    font-size: 20px;
+    font-family: "Roboto Light",sans-serif;
+}
+.slides {
+    position: absolute;
+    right: 260px;
+    top: 55px;
+    font-size: 20px;
+    font-family: "Roboto Light";
+}
+.labs {
+    position: absolute;
+    right: 200px;
+    top: 55px;
+    font-size: 20px;
+    font-family: "Roboto Light";
+}
+.students {
+    position: absolute;
+    right: 100px;
+    top: 55px;
+    font-size: 20px;
+    font-family: "Roboto Light";
+}
+.chunghieng {
+    background-color: #67bcf8;
+    color: #f1f3f2;
+    text-align: center;
+    height: 200px;
+    padding-top: 35px;
+}
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+div {
+    display: block;
+}
+.col-4 {
+    width: 33.33%;
+}
+p {
+    color: black;
+    font-family: "Candara Light";
+    font-size: 20px;
+}
+element.style {
+    margin-left: 678px;
+}
+i {
+    font-style: italic;
+    font-weight: bold;
+    font-size: 23px;
+}
+h3{
+    font-size: 30px;
+}
+.col-12 {
+    width: 100%;
+}
+footer {
+    background-color: lightskyblue;
+    height: 88px;
+    text-align: center;
+    font-family: "Roboto Light";
+    color: black;
+}

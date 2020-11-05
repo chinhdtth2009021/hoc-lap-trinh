@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive demo</title>
+    <style>
+        / đảm bảo các cột giữ nguyên độ dài 8.33% /
+        * {
+            box-sizing: border-box;
+            font-family: "Gill Sans Nova", sans-serif;
+            font-weight: 300;
+            font-style: normal;
+            font-size: 15px;
+            line-height: 1.4em;
+        }
+
+        .header {
+            padding: 15px;
+        }
+
+        .left-menu {
+
+        }
+
+        .left-menu ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .left-menu li {
+            padding: 8px;
+            margin-bottom: 7px;
+            background-color :#33b5e5;
+            color: #ffffff;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+        }
+
+        .left-menu li:hover {
+            background-color: #0099cc;
+        }
+
+        .main-content {
+
+        }
+
+        .product {
+            border-top: 1px solid lightgray;
+            border-right: 1px solid lightgray;
+            border-bottom: 1px solid lightgray;
+        }
+
+        .product:first-child {
+            border-left: 1px solid lightgray;
+        }
+
+        .product .information {
+            padding: 0 15px;
+        }
+
+        .product .thumbnail {
+
+        }
+
+        .product .price .from {
+            color: #89c21e;
+        }
+
+        .product .price .current-price {
+            color: #89c21e;
+            font-size: 1.25em;
+            line-height: 1em;
+            font-weight: 400;
+        }
+
+        .product .price .old-price {
+            text-decoration: line-through;
+        }
+
+        .button-add-cart {
+            background-color: #5c8018;
+            color: #ffffff;
+            border: 2px solid #5c8018;
+            height: auto;
+            width: 100%;
+            padding: 9px 1.4em;
+            margin: 4px;
+            vertical-align: middle;
+            text-align: center;
+        }
+
+        .button-add-cart:hover {
+            background-color: #51a732;
+            border: 2px solid rgba(72, 128, 43, 0.51);
+        }
+
+        .add-cart {
+            margin-top: 10px;
+        }
+
+        .footer {
+            background-color: antiquewhite;
+        }
+
+        [class*="col-"] {
+            float: left;
+            padding: 15px;
+        }
+
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        /*a*/
+        [class*="col-"] {
+            width: 100%;
+        }
+
+        /*b*/
+        @media only screen and (min-width: 600px) {
+        / For tablets: /
+            .col-s-1 {width: 8.33%;}
+            .col-s-2 {width: 16.66%;}
+            .col-s-3 {width: 25%;}
+            .col-s-4 {width: 33.33%;}
+            .col-s-5 {width: 41.66%;}
+            .col-s-6 {width: 50%;}
+            .col-s-7 {width: 58.33%;}
+            .col-s-8 {width: 66.66%;}
+            .col-s-9 {width: 75%;}
+            .col-s-10 {width: 83.33%;}
+            .col-s-11 {width: 91.66%;}
+            .col-s-12 {width: 100%;}
+        }
+
+        /*c*/
+        @media only screen and (min-width: 768px) {
+        / For desktop: /
+            .col-1 {width: 8.33%;}
+            .col-2 {width: 16.66%;}
+            .col-3 {width: 25%;}
+            .col-4 {width: 33.33%;}
+            .col-5 {width: 41.66%;}
+            .col-6 {width: 50%;}
+            .col-7 {width: 58.33%;}
+            .col-8 {width: 66.66%;}
+            .col-9 {width: 75%;}
+            .col-10 {width: 83.33%;}
+            .col-11 {width: 91.66%;}
+            .col-12 {width: 100%;}
+        }
+
+    </style>
+</head>
+<body>
+<div class="header row">
+    <div class="col-3" id="logo">Logo</div>
+    <div class="col-5"></div>
+    <div class="col-4" id="menu">Menu</div>
+</div>
+<div class="row">
+    <div class="col-3 col-s-3 left-menu">
+        <ul>
+            <li title="alo-ha"><a href="#">List product</a></li>
+            <li title="blo"><a href="#">List category</a></li>
+            <li title="dlo"><a href="#">Contact us</a></li>
+        </ul>
+    </div>
+    <div class="col-9 col-s-9 main-content" title="alo-ho">
+        <div class="row">
+            <div class="col-3 product">
+                <div class="thumbnail">
+                    <img style="max-width: 100%;" src="https://cdn.shopify.com/s/files/1/0848/3488/products/CCFarmShopProductsFruit_Vegetables1200x1200_FENNEL.jpg?v=1591107515" alt="">
+                </div>
+                <div class="information">
+                    <div class="weight">
+                        1.1lb
+                    </div>
+                    <div class="title">
+                        Brussel Sprouts
+                    </div>
+                    <div class="price">
+                        <span class="from">From</span>&nbsp;<span class="current-price">$4.50</span>&nbsp;<span class="old-price">$7.50</span>
+                    </div>
+                    <div class="add-cart">
+                        <div class="button-add-cart">Add to cart</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 product">
+                <div class="thumbnail">
+                    <img style="max-width: 100%;" src="https://cdn.shopify.com/s/files/1/0848/3488/products/CCFarmShopProductsFruit_Vegetables1200x1200_FENNEL.jpg?v=1591107515" alt="">
+                </div>
+                <div class="information">
+                    <div class="weight">
+                        1.1lb
+                    </div>
+                    <div class="title" style="color:red;font-size: 10px">
+                        Brussel Sprouts
+                    </div>
+                    <div class="price">
+                        <span class="from">From</span>&nbsp;<span class="current-price">$4.50</span>&nbsp;<span class="old-price">$7.50</span>
+                    </div>
+                    <div class="add-cart">
+                        <div class="button-add-cart">Add to cart</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 product">
+                <div class="thumbnail">
+                    <img style="max-width: 100%;" src="https://cdn.shopify.com/s/files/1/0848/3488/products/CCFarmShopProductsFruit_Vegetables1200x1200_FENNEL.jpg?v=1591107515" alt="">
+                </div>
+                <div class="information">
+                    <div class="weight">
+                        1.1lb
+                    </div>
+                    <div class="title" style="color:red;font-size: 10px" >
+                        Brussel Sprouts
+                    </div>
+                    <div class="price">
+                        <span class="from">From</span>&nbsp;<span class="current-price">$4.50</span>&nbsp;<span class="old-price">$7.50</span>
+                    </div>
+                    <div class="add-cart">
+                        <div class="button-add-cart">Add to cart</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 product">
+                <div class="thumbnail">
+                    <img style="max-width: 100%;" src="https://cdn.shopify.com/s/files/1/0848/3488/products/CCFarmShopProductsFruit_Vegetables1200x1200_FENNEL.jpg?v=1591107515" alt="">
+                </div>
+                <div class="information">
+                    <div class="weight">
+                        1.1lb
+                    </div>
+                    <div class="title">
+                        Brussel Sprouts
+                    </div>
+                    <div class="price">
+                        <span class="from">From</span>&nbsp;<span class="current-price">$4.50</span>&nbsp;<span class="old-price">$7.50</span>
+                    </div>
+                    <div class="add-cart">
+                        <div class="button-add-cart">Add to cart</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="footer row">
+    <div class="col-2">Footer</div>
+</div>
+<script src="index.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive demo</title>
+    <style>
+        / đảm bảo các cột giữ nguyên độ dài 8.33% /
+        * {
+            box-sizing: border-box;
+            font-family: "Gill Sans Nova", sans-serif;
+            font-weight: 300;
+            font-style: normal;
+            font-size: 15px;
+            line-height: 1.4em;
+        }
+
+        .header {
+            padding: 15px;
+        }
+
+        .left-menu {
+
+        }
+
+        .left-menu ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .left-menu li {
+            padding: 8px;
+            margin-bottom: 7px;
+            background-color :#33b5e5;
+            color: #ffffff;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+        }
+
+        .left-menu li:hover {
+            background-color: #0099cc;
+        }
+
+        .main-content {
+
+        }
+
+        .product {
+            border-top: 1px solid lightgray;
+            border-right: 1px solid lightgray;
+            border-bottom: 1px solid lightgray;
+        }
+
+        .product:first-child {
+            border-left: 1px solid lightgray;
+        }
+
+        .product .information {
+            padding: 0 15px;
+        }
+
+        .product .thumbnail {
+
+        }
+
+        .product .price .from {
+            color: #89c21e;
+        }
+
+        .product .price .current-price {
+            color: #89c21e;
+            font-size: 1.25em;
+            line-height: 1em;
+            font-weight: 400;
+        }
+
+        .product .price .old-price {
+            text-decoration: line-through;
+        }
+
+        .button-add-cart {
+            background-color: #5c8018;
+            color: #ffffff;
+            border: 2px solid #5c8018;
+            height: auto;
+            width: 100%;
+            padding: 9px 1.4em;
+            margin: 4px;
+            vertical-align: middle;
+            text-align: center;
+        }
+
+        .button-add-cart:hover {
+            background-color: #51a732;
+            border: 2px solid rgba(72, 128, 43, 0.51);
+        }
+
+        .add-cart {
+            margin-top: 10px;
+        }
+
+        .footer {
+            background-color: antiquewhite;
+        }
+
+        [class*="col-"] {
+            float: left;
+            padding: 15px;
+        }
+
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        /*a*/
+        [class*="col-"] {
+            width: 100%;
+        }
+
+        /*b*/
+        @media only screen and (min-width: 600px) {
+            / For tablets: /
+            .col-s-1 {width: 8.33%;}
+            .col-s-2 {width: 16.66%;}
+            .col-s-3 {width: 25%;}
+            .col-s-4 {width: 33.33%;}
+            .col-s-5 {width: 41.66%;}
+            .col-s-6 {width: 50%;}
+            .col-s-7 {width: 58.33%;}
+            .col-s-8 {width: 66.66%;}
+            .col-s-9 {width: 75%;}
+            .col-s-10 {width: 83.33%;}
+            .col-s-11 {width: 91.66%;}
+            .col-s-12 {width: 100%;}
+        }
+
+        /*c*/
+        @media only screen and (min-width: 768px) {
+            / For desktop: /
+            .col-1 {width: 8.33%;}
+            .col-2 {width: 16.66%;}
+            .col-3 {width: 25%;}
+            .col-4 {width: 33.33%;}
+            .col-5 {width: 41.66%;}
+            .col-6 {width: 50%;}
+            .col-7 {width: 58.33%;}
+            .col-8 {width: 66.66%;}
+            .col-9 {width: 75%;}
+            .col-10 {width: 83.33%;}
+            .col-11 {width: 91.66%;}
+            .col-12 {width: 100%;}
+        }
+
+    </style>
+</head>
+<body>
+<div class="header row">
+    <div class="col-3" id="logo">Logo</div>
+    <div class="col-5"></div>
+    <div class="col-4" id="menu">Menu</div>
+</div>
+<div class="row">
+    <div class="col-3 col-s-3 left-menu">
+        <ul>
+            <li title="alo-ha"><a href="#">List product</a></li>
+            <li title="blo"><a href="#">List category</a></li>
+            <li title="dlo"><a href="#">Contact us</a></li>
+        </ul>
+    </div>
+    <div class="col-9 col-s-9 main-content" title="alo-ho">
+        <div class="row">
+            <div class="col-3 product">
+                <div class="thumbnail">
+                    <img style="max-width: 100%;" src="https://cdn.shopify.com/s/files/1/0848/3488/products/CCFarmShopProductsFruit_Vegetables1200x1200_FENNEL.jpg?v=1591107515" alt="">
+                </div>
+                <div class="information">
+                    <div class="weight">
+                        1.1lb
+                    </div>
+                    <div class="title">
+                        Brussel Sprouts
+                    </div>
+                    <div class="price">
+                        <span class="from">From</span>&nbsp;<span class="current-price">$4.50</span>&nbsp;<span class="old-price">$7.50</span>
+                    </div>
+                    <div class="add-cart">
+                        <div class="button-add-cart">Add to cart</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 product">
+                <div class="thumbnail">
+                    <img style="max-width: 100%;" src="https://cdn.shopify.com/s/files/1/0848/3488/products/CCFarmShopProductsFruit_Vegetables1200x1200_FENNEL.jpg?v=1591107515" alt="">
+                </div>
+                <div class="information">
+                    <div class="weight">
+                        1.1lb
+                    </div>
+                    <div class="title" style="color:red;font-size: 10px">
+                        Brussel Sprouts
+                    </div>
+                    <div class="price">
+                        <span class="from">From</span>&nbsp;<span class="current-price">$4.50</span>&nbsp;<span class="old-price">$7.50</span>
+                    </div>
+                    <div class="add-cart">
+                        <div class="button-add-cart">Add to cart</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 product">
+                <div class="thumbnail">
+                    <img style="max-width: 100%;" src="https://cdn.shopify.com/s/files/1/0848/3488/products/CCFarmShopProductsFruit_Vegetables1200x1200_FENNEL.jpg?v=1591107515" alt="">
+                </div>
+                <div class="information">
+                    <div class="weight">
+                        1.1lb
+                    </div>
+                    <div class="title" style="color:red;font-size: 10px" >
+                        Brussel Sprouts
+                    </div>
+                    <div class="price">
+                        <span class="from">From</span>&nbsp;<span class="current-price">$4.50</span>&nbsp;<span class="old-price">$7.50</span>
+                    </div>
+                    <div class="add-cart">
+                        <div class="button-add-cart">Add to cart</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 product">
+                <div class="thumbnail">
+                    <img style="max-width: 100%;" src="https://cdn.shopify.com/s/files/1/0848/3488/products/CCFarmShopProductsFruit_Vegetables1200x1200_FENNEL.jpg?v=1591107515" alt="">
+                </div>
+                <div class="information">
+                    <div class="weight">
+                        1.1lb
+                    </div>
+                    <div class="title">
+                        Brussel Sprouts
+                    </div>
+                    <div class="price">
+                        <span class="from">From</span>&nbsp;<span class="current-price">$4.50</span>&nbsp;<span class="old-price">$7.50</span>
+                    </div>
+                    <div class="add-cart">
+                        <div class="button-add-cart">Add to cart</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="footer row">
+    <div class="col-2">Footer</div>
+</div>
+<script src="index.js"></script>
+</body>
+</html>-->
